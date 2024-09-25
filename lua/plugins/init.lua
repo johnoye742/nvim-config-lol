@@ -6,7 +6,7 @@ return {
       require "configs.conform"
     end,
   },
-
+  { 'wakatime/vim-wakatime', lazy = false },
   -- These are some examples, uncomment them if you want to see them work!
  {
      "neovim/nvim-lspconfig",
@@ -15,7 +15,15 @@ return {
        require "configs.lspconfig"
      end,
    },
-  
+  {
+      "luckasRanarison/tailwind-tools.nvim",
+      dependencies = { "nvim-treesitter/nvim-treesitter" },
+      opts = {
+        ensure_installed = {
+        "tailwindcss-language-server"
+      }
+    } -- your configuration
+    },
   {
    	"williamboman/mason.nvim",
    	opts = {
